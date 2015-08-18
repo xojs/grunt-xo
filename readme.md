@@ -6,6 +6,8 @@
 
 Please consider if you really need grunt for this. Using a [npm run script](https://github.com/sindresorhus/xo#workflow) would be better.
 
+*Issues regarding rules should be reported on the ESLint [issue tracker](https://github.com/eslint/eslint/issues) as it's the actual linter.*
+
 
 ## Install
 
