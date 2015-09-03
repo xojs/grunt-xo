@@ -36,7 +36,7 @@ grunt.registerTask('default', ['xo']);
 
 ## Options
 
-XO [options](https://github.com/sindresorhus/xo#config) can be specified in `package.json`.
+XO [options](https://github.com/sindresorhus/xo#config) can be specified in package.json.
 
 In the Gruntfile you can specify the following options:
 

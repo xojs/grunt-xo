@@ -48,7 +48,7 @@
     "simple"
   ],
   "dependencies": {
-    "xo": "^0.7.1"
+    "xo": "^0.8.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

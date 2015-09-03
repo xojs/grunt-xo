@@ -1,4 +1,3 @@
-/* eslint-disable no-invalid-this */
 'use strict';
 var xo = require('xo');
 
@@ -10,13 +9,7 @@ module.exports = function (grunt) {
 			quiet: false
 		});
 
-		xo.lintFiles(this.filesSrc, function (err, report) {
-			if (err) {
-				grunt.warn(err);
-				cb();
-				return;
-			}
-
+		xo.lintFiles(this.filesSrc).then(function (report) {
 			var results = report.results;
 
 			if (opts.quiet) {
@@ -32,6 +25,9 @@ module.exports = function (grunt) {
 			}
 
 			cb(report.errorCount === 0);
+		}).catch(function (err) {
+			grunt.warn(err);
+			cb();
 		});
 	});
 };
