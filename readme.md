@@ -27,6 +27,11 @@ grunt.initConfig({
 			quiet: true
 		},
 		target: ['file.js']
+
+		// or
+		subTask: {
+			src: ['file.js']
+		}
 	}
 });
 
@@ -42,7 +47,7 @@ In the Gruntfile you can specify the following options:
 
 ### outputFile
 
-Type: `string`  
+Type: `string`
 Default: `''`
 
 Output the report to a file.
@@ -50,7 +55,7 @@ Output the report to a file.
 
 ### quiet
 
-Type: `boolean`  
+Type: `boolean`
 Default: `false`
 
 Report errors only.

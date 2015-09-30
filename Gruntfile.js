@@ -2,11 +2,13 @@
 module.exports = function (grunt) {
 	grunt.initConfig({
 		xo: {
-			validate: ['test/fixture.js']
+			testTask: {
+				src: ['test/*.js']
+			}
 		},
 		shell: {
 			xo: {
-				command: 'grunt xo',
+				command: 'grunt xo:testTask',
 				options: {
 					callback: function (_, stdout, stderr, cb) {
 						if (/test\/fixture\.js/.test(stdout)) {
