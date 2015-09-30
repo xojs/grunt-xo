@@ -9,25 +9,27 @@ module.exports = function (grunt) {
 			quiet: false
 		});
 
-		xo.lintFiles(this.filesSrc).then(function (report) {
-			var results = report.results;
+		this.files.forEach(function (f) {
+			xo.lintFiles(f.orig.src).then(function (report) {
+				var results = report.results;
 
-			if (opts.quiet) {
-				results = xo.getErrorResults(results);
-			}
+				if (opts.quiet) {
+					results = xo.getErrorResults(results);
+				}
 
-			var output = xo.getFormatter()(results);
+				var output = xo.getFormatter()(results);
 
-			if (opts.outputFile) {
-				grunt.file.write(opts.outputFile, output);
-			} else {
-				console.log(output);
-			}
+				if (opts.outputFile) {
+					grunt.file.write(opts.outputFile, output);
+				} else {
+					console.log(output);
+				}
 
-			cb(report.errorCount === 0);
-		}).catch(function (err) {
-			grunt.warn(err);
-			cb();
+				cb(report.errorCount === 0);
+			}).catch(function (err) {
+				grunt.warn(err);
+				cb();
+			});
 		});
 	});
 };
