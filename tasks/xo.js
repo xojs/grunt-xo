@@ -9,6 +9,11 @@ module.exports = function (grunt) {
 			quiet: false
 		});
 
+		if (this.filesSrc.length === 0) {
+			cb();
+			return;
+		}
+
 		xo.lintFiles(this.filesSrc).then(function (report) {
 			var results = report.results;
 
