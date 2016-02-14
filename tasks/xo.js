@@ -5,6 +5,7 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('xo', 'Validate files with XO', function () {
 		var cb = this.async();
 		var opts = this.options({
+			reporter: 'stylish',
 			outputFile: false,
 			quiet: false
 		});
@@ -21,7 +22,7 @@ module.exports = function (grunt) {
 				results = xo.getErrorResults(results);
 			}
 
-			var output = xo.getFormatter()(results);
+			var output = xo.getFormatter(opts.reporter)(results);
 
 			if (opts.outputFile) {
 				grunt.file.write(opts.outputFile, output);

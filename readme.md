@@ -40,17 +40,22 @@ XO [options](https://github.com/sindresorhus/xo#config) can be specified in pack
 
 In the Gruntfile you can specify the following options:
 
+##### reporter
+
+Type: `string`<br>
+Default: `'stylish'`
+
+Any [ESLint reporter](http://eslint.org/docs/user-guide/command-line-interface#f-format).
+
 ### outputFile
 
-Type: `string`  
-Default: `''`
+Type: `string`
 
 Output the report to a file.
 
-
 ### quiet
 
-Type: `boolean`  
+Type: `boolean`<br>
 Default: `false`
 
 Report errors only.
