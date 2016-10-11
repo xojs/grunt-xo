@@ -1,11 +1,10 @@
 'use strict';
-var xo = require('xo');
+const xo = require('xo');
 
-module.exports = function (grunt) {
+module.exports = grunt => {
 	grunt.registerMultiTask('xo', 'Validate files with XO', function () {
-		var cb = this.async();
-		var opts = this.options({
-			reporter: 'stylish',
+		const cb = this.async();
+		const opts = this.options({
 			outputFile: false,
 			quiet: false
 		});
@@ -15,14 +14,14 @@ module.exports = function (grunt) {
 			return;
 		}
 
-		xo.lintFiles(this.filesSrc).then(function (report) {
-			var results = report.results;
+		xo.lintFiles(this.filesSrc).then(report => {
+			let results = report.results;
 
 			if (opts.quiet) {
 				results = xo.getErrorResults(results);
 			}
 
-			var output = xo.getFormatter(opts.reporter)(results);
+			const output = xo.getFormatter(opts.reporter)(results);
 
 			if (opts.outputFile) {
 				grunt.file.write(opts.outputFile, output);
@@ -31,7 +30,7 @@ module.exports = function (grunt) {
 			}
 
 			cb(report.errorCount === 0);
-		}).catch(function (err) {
+		}).catch(err => {
 			grunt.warn(err);
 			cb();
 		});

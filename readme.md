@@ -43,9 +43,9 @@ In the Gruntfile you can specify the following options:
 ##### reporter
 
 Type: `string`<br>
-Default: `'stylish'`
+Default: [`eslint-formatter-pretty`](https://github.com/sindresorhus/eslint-formatter-pretty)
 
-Any [ESLint reporter](http://eslint.org/docs/user-guide/command-line-interface#f-format).
+Any [ESLint reporter](http://eslint.org/docs/user-guide/command-line-interface#f---format).
 
 ### outputFile
 

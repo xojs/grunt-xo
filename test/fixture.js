@@ -1,2 +1,2 @@
 'use strict';
-var unicorn_rainbow = 'foo';
+const unicorn_rainbow = 'foo';

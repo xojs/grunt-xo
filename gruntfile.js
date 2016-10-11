@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 			xo: {
 				command: 'grunt xo',
 				options: {
-					callback: function (_, stdout, stderr, cb) {
+					callback(_, stdout, stderr, cb) {
 						if (/test\/fixture\.js/.test(stdout)) {
 							if (/camelcase/.test(stdout) && /no-unused-vars/.test(stdout)) {
 								cb();

@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo --ignore=test/fixture.js && grunt"
@@ -57,5 +57,8 @@
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
+  },
+  "xo": {
+    "esnext": true
   }
 }
