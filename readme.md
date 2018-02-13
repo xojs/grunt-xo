@@ -1,10 +1,10 @@
-# grunt-xo [![Build Status](https://travis-ci.org/sindresorhus/grunt-xo.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-xo)
+# grunt-xo [![Build Status](https://travis-ci.org/xojs/grunt-xo.svg?branch=master)](https://travis-ci.org/xojs/grunt-xo)
 
-> Validate files with [XO](https://github.com/sindresorhus/xo)
+> Validate files with [XO](https://github.com/xojs/xo)
 
 ![](screenshot.png)
 
-Please consider if you really need grunt for this. Using a [npm run script](https://github.com/sindresorhus/xo#workflow) would be better.
+Please consider if you really need grunt for this. Using a [npm run script](https://github.com/xojs/xo#workflow) would be better.
 
 *Issues regarding rules should be reported on the ESLint [issue tracker](https://github.com/eslint/eslint/issues) as it's the actual linter.*
 
@@ -36,7 +36,7 @@ grunt.registerTask('default', ['xo']);
 
 ## Options
 
-XO [options](https://github.com/sindresorhus/xo#config) can be specified in package.json.
+XO [options](https://github.com/xojs/xo#config) can be specified in package.json.
 
 In the Gruntfile you can specify the following options:
 
