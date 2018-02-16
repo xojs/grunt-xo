@@ -4,7 +4,7 @@
 
 ![](screenshot.png)
 
-Please consider if you really need grunt for this. Using a [npm run script](https://github.com/xojs/xo#workflow) would be better.
+Please consider if you really need Grunt for this. Using a [npm run script](https://github.com/xojs/xo#workflow) would be better.
 
 *Issues regarding rules should be reported on the ESLint [issue tracker](https://github.com/eslint/eslint/issues) as it's the actual linter.*
 

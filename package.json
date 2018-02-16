@@ -48,7 +48,7 @@
 		"simple"
 	],
 	"dependencies": {
-		"xo": "^0.18.0"
+		"xo": "^0.20.2"
 	},
 	"devDependencies": {
 		"grunt": "^1.0.1",
@@ -57,10 +57,5 @@
 	},
 	"peerDependencies": {
 		"grunt": ">=1"
-	},
-	"xo": {
-		"rules": {
-			"promise/no-callback-in-promise": "off"
-		}
 	}
 }
