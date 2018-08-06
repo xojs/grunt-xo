@@ -15,7 +15,7 @@ module.exports = grunt => {
 		}
 
 		xo.lintFiles(this.filesSrc).then(report => {
-			let results = report.results;
+			let {results} = report;
 
 			if (opts.quiet) {
 				results = xo.getErrorResults(results);
