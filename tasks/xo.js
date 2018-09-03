@@ -30,8 +30,8 @@ module.exports = grunt => {
 			}
 
 			cb(report.errorCount === 0);
-		}).catch(err => {
-			grunt.warn(err);
+		}).catch(error => {
+			grunt.warn(error);
 			cb();
 		});
 	});
