@@ -10,7 +10,7 @@
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"scripts": {
 		"test": "xo --ignore=test/fixture.js && grunt"
@@ -47,10 +47,10 @@
 		"simple"
 	],
 	"dependencies": {
-		"xo": "^0.24.0"
+		"xo": "^0.25.3"
 	},
 	"devDependencies": {
-		"grunt": "^1.0.1",
+		"grunt": "^1.0.4",
 		"grunt-cli": "^1.3.2",
 		"grunt-shell": "^3.0.1"
 	},
