@@ -1,4 +1,4 @@
-# grunt-xo [![Build Status](https://travis-ci.org/xojs/grunt-xo.svg?branch=master)](https://travis-ci.org/xojs/grunt-xo)
+# grunt-xo [![Build Status](https://travis-ci.com/xojs/grunt-xo.svg?branch=master)](https://travis-ci.com/github/xojs/grunt-xo)
 
 > Validate files with [XO](https://github.com/xojs/xo)
 
@@ -8,13 +8,11 @@ Please consider if you really need Grunt for this. Using a [npm run script](http
 
 *Issues regarding rules should be reported on the ESLint [issue tracker](https://github.com/eslint/eslint/issues) as it's the actual linter.*
 
-
 ## Install
 
 ```
 $ npm install --save-dev grunt-xo
 ```
-
 
 ## Usage
 
@@ -33,7 +31,6 @@ grunt.initConfig({
 grunt.registerTask('default', ['xo']);
 ```
 
-
 ## Options
 
 XO [options](https://github.com/xojs/xo#config) can be specified in package.json.
@@ -42,8 +39,8 @@ In the Gruntfile you can specify the following options:
 
 ##### reporter
 
-Type: `string`<br>
-Default: [`eslint-formatter-pretty`](https://github.com/sindresorhus/eslint-formatter-pretty)
+Type: `string`\
+Default: [`'eslint-formatter-pretty'`](https://github.com/sindresorhus/eslint-formatter-pretty)
 
 Any [ESLint reporter](http://eslint.org/docs/user-guide/command-line-interface#f---format).
 
@@ -55,12 +52,7 @@ Output the report to a file.
 
 ### quiet
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `false`
 
 Report errors only.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

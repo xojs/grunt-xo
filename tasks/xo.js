@@ -3,36 +3,40 @@ const xo = require('xo');
 
 module.exports = grunt => {
 	grunt.registerMultiTask('xo', 'Validate files with XO', function () {
-		const cb = this.async();
-		const opts = this.options({
+		const done = this.async();
+
+		const options = this.options({
 			outputFile: false,
 			quiet: false
 		});
 
 		if (this.filesSrc.length === 0) {
-			cb();
+			done();
 			return;
 		}
 
-		xo.lintFiles(this.filesSrc).then(report => {
-			let {results} = report;
+		(async () => {
+			try {
+				const report = await xo.lintFiles(this.filesSrc);
+				let {results} = report;
 
-			if (opts.quiet) {
-				results = xo.getErrorResults(results);
+				if (options.quiet) {
+					results = xo.getErrorResults(results);
+				}
+
+				const output = xo.getFormatter(options.reporter)(results);
+
+				if (options.outputFile) {
+					grunt.file.write(options.outputFile, output);
+				} else {
+					console.log(output);
+				}
+
+				done(report.errorCount === 0);
+			} catch (error) {
+				grunt.warn(error);
+				done();
 			}
-
-			const output = xo.getFormatter(opts.reporter)(results);
-
-			if (opts.outputFile) {
-				grunt.file.write(opts.outputFile, output);
-			} else {
-				console.log(output);
-			}
-
-			cb(report.errorCount === 0);
-		}).catch(error => {
-			grunt.warn(error);
-			cb();
-		});
+		})();
 	});
 };

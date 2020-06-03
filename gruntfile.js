@@ -8,15 +8,15 @@ module.exports = grunt => {
 			xo: {
 				command: 'grunt xo',
 				options: {
-					callback(_, stdout, stderr, cb) {
-						if (/test\/fixture\.js/.test(stdout)) {
-							if (/camelcase/.test(stdout) && /no-unused-vars/.test(stdout)) {
-								cb();
+					callback(_, stdout, stderr, done) {
+						if (stdout.includes('test/fixture.js')) {
+							if (stdout.includes('camelcase') && stdout.includes('no-unused-vars')) {
+								done();
 							} else {
-								cb(false);
+								done(false);
 							}
 						} else {
-							cb(false);
+							done(false);
 						}
 					}
 				}
