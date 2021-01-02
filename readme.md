@@ -1,4 +1,4 @@
-# grunt-xo [![Build Status](https://travis-ci.com/xojs/grunt-xo.svg?branch=master)](https://travis-ci.com/github/xojs/grunt-xo)
+# grunt-xo
 
 > Validate files with [XO](https://github.com/xojs/xo)
 
