@@ -1,3 +1,7 @@
+Deprecated. Just use the [XO](https://github.com/xojs/xo) CLI directly.
+
+---
+
 # grunt-xo
 
 > Validate files with [XO](https://github.com/xojs/xo)
